@@ -59,7 +59,7 @@ export const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-3 group">
-              <img src="src\photos\mrisa.jpg" alt="MRISA Logo" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
+              <img src="public/photos/mrisa.jpg" alt="MRISA Logo" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
             </Link>
 
             <div className="hidden md:flex items-center space-x-2 bg-black/20 border border-primary/10 rounded-full px-2">
