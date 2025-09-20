@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Code, Shield, Zap } from "lucide-react";
+// --- UPDATED: Added Instagram and Linkedin icons ---
+import { Github, Linkedin, Mail, Code, Shield, Zap, Instagram } from "lucide-react";
 // Assuming Scene3D is defined elsewhere
 import { Scene3D } from "@/components/Scene3D"; 
 import { Canvas } from "@react-three/fiber";
@@ -15,61 +16,61 @@ interface TeamMember {
   image_url: string | null;
   linkedin_url?: string;
   github_url?: string;
-  email?: string; // --- NEW: Added email property
+  email?: string;
 }
 
-// --- Updated team data with new members and social links ---
+// Team data remains the same
 const manualTeam: TeamMember[] = [
-  {
-    id: 't1',
-    name: 'Yashasvi Yadav',
-    role: 'President',
-    bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
-    image_url: '/photos/Yashasvi_Yadav.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/yashasviyadav007'
-  },
-  {
-    id: 't2',
-    name: 'Shivansh Saxena',
-    role: 'Vice President',
-    bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
-    image_url: '/photos/Shivansh_Saxena.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/shivansh-saxena-6a31b3248'
-  },
-  {
-    id: 't3',
-    name: 'P Bhaskar Rao',
-    role: 'Secretary',
-    bio: 'The organizational backbone of the team, managing communications and ensuring smooth operational workflow.',
-    image_url: '/photos/P_Bhaskar_Rao.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/p-bhaskar-rao-140a24227'
-  },
-  {
-    id: 't4',
-    name: 'Aditya Tripathi',
-    role: 'Operations',
-    bio: 'Expert in managing day-to-day activities and strategic projects, ensuring efficiency and timely execution.',
-    image_url: '/photos/Aditiya.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/aditya766'
-  },
-  {
-    id: 't5',
-    name: 'Jiya Siwach',
-    role: 'Media Head',
-    bio: 'The creative force behind our brand, leading our media strategy and public engagement.',
-    image_url: '/photos/jiya.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/jiya-siwach-9b5826310'
-  },
-  {
-    id: 't6',
-    name: 'Saurav Kumar', // Name updated for accuracy
-    role: 'Technical Head',
-    bio: 'The engineering visionary who transforms complex technical challenges into powerful, scalable solutions.', 
-    image_url: '/photos/saurav_kumar.jpg',
-    linkedin_url: 'https://www.linkedin.com/in/saurav-kumar-astro',
-    github_url:  'https://github.com/Astro-Saurav',
-    email: '0501saurav@gmail.com' // --- NEW: Added email
-  }
+    {
+      id: 't1',
+      name: 'Yashasvi Yadav',
+      role: 'President',
+      bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
+      image_url: '/photos/Yashasvi_Yadav.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/yashasviyadav007'
+    },
+    {
+      id: 't2',
+      name: 'Shivansh Saxena',
+      role: 'Vice President',
+      bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
+      image_url: '/photos/Shivansh_Saxena.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/shivansh-saxena-6a31b3248'
+    },
+    {
+      id: 't3',
+      name: 'P Bhaskar Rao',
+      role: 'Secretary',
+      bio: 'The organizational backbone of the team, managing communications and ensuring smooth operational workflow.',
+      image_url: '/photos/P_Bhaskar_Rao.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/p-bhaskar-rao-140a24227'
+    },
+    {
+      id: 't4',
+      name: 'Aditya Tripathi',
+      role: 'Operations',
+      bio: 'Expert in managing day-to-day activities and strategic projects, ensuring efficiency and timely execution.',
+      image_url: '/photos/Aditiya.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/aditya766'
+    },
+    {
+      id: 't5',
+      name: 'Jiya Siwach',
+      role: 'Media Head',
+      bio: 'The creative force behind our brand, leading our media strategy and public engagement.',
+      image_url: '/photos/jiya.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/jiya-siwach-9b5826310'
+    },
+    {
+      id: 't6',
+      name: 'Saurav Kumar',
+      role: 'Technical Head',
+      bio: 'The engineering visionary who transforms complex technical challenges into powerful, scalable solutions.', 
+      image_url: '/photos/saurav_kumar.jpg',
+      linkedin_url: 'https://www.linkedin.com/in/saurav-kumar-astro',
+      github_url:  'https://github.com/Astro-Saurav',
+      email: '0501saurav@gmail.com'
+    }
 ];
 
 const Title3D = () => (
@@ -127,8 +128,7 @@ const TeamCard = ({ member, index }: { member: TeamMember, index: number }) => {
         </div>
         <div className="text-center mb-4"><h3 className="text-2xl font-sans font-bold text-white mb-2 group-hover:text-green-400 transition-colors">{member.name}</h3><p className="text-sm font-mono uppercase tracking-wide text-green-500/80">{member.role}</p></div>
         <p className="text-gray-400 text-center mb-6 leading-relaxed">{member.bio}</p>
-        <div className="flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {/* --- CORRECTED: Logic to handle all social buttons dynamically --- */}
+        <div className="flex justify-center space-x-4 h-10 items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {socialIcons.map(({ Component, name }, idx) => {
               let url;
               switch (name) {
@@ -139,22 +139,15 @@ const TeamCard = ({ member, index }: { member: TeamMember, index: number }) => {
                   url = member.github_url;
                   break;
                 case 'mail':
-                  url = member.email ? `mailto:${member.email}` : undefined; // --- CORRECTED: Create mailto link
+                  url = member.email ? `mailto:${member.email}` : undefined;
                   break;
                 default:
                   url = undefined;
               }
-              
               if (!url) return null;
-              
               return (
                 <motion.a
-                  key={idx}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  key={idx} href={url} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 bg-primary/10 hover:bg-primary/20 border border-primary/30 hover:border-primary/50 cursor-pointer"
                 >
                   <Component className="h-4 w-4 text-primary" />
@@ -192,6 +185,7 @@ const Team = () => {
             ))}
           </div>
 
+          {/* --- MODIFIED: Community CTA Section --- */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,15 +195,29 @@ const Team = () => {
           >
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-sans font-bold mb-6 text-white">
-                Join Our Mission
+                Join Our Community
               </h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-                We're always looking for passionate cybersecurity professionals, developers, and researchers 
-                who want to shape the future of security education.
+                Stay connected and be the first to know about our upcoming events, workshops, and competitions by following our social media channels.
               </p>
+              {/* --- NEW: Social media buttons --- */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-green-500 text-black rounded-lg px-8 py-3 font-semibold">View Open Positions</motion.button>
-                  <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border border-gray-600 text-gray-300 rounded-lg px-8 py-3 font-semibold">Contact Us</motion.button>
+                  <motion.a 
+                    href="https://www.linkedin.com/company/manav-rachna-infosec-army" target="_blank" rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center justify-center bg-blue-600 text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-blue-500"
+                  >
+                    <Linkedin className="mr-2 h-5 w-5" />
+                    Follow on LinkedIn
+                  </motion.a>
+                  <motion.a
+                    href="https://www.instagram.com/mrisa_mriirs" target="_blank" rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center justify-center bg-pink-600 text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-pink-500"
+                  >
+                    <Instagram className="mr-2 h-5 w-5" />
+                    Join on Instagram
+                  </motion.a>
               </div>
             </div>
           </motion.div>
