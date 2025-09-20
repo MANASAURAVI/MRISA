@@ -25,7 +25,7 @@ const manualTeam: TeamMember[] = [
     name: 'Yashasvi Yadav',
     role: 'President',
     bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
-    image_url: 'public/photos/Yashasvi_Yadav.jpg',
+    image_url: '/photos/Yashasvi_Yadav.jpg',
     linkedin_url: 'https://www.linkedin.com/in/yashasviyadav007'
   },
   {
@@ -33,7 +33,7 @@ const manualTeam: TeamMember[] = [
     name: 'Shivansh Saxena',
     role: 'Vice President',
     bio: 'A strategic leader driving the core vision and initiatives of the team, ensuring excellence in all endeavors.',
-    image_url: 'public/photos/Shivansh_Saxena.jpg',
+    image_url: '/photos/Shivansh_Saxena.jpg',
     linkedin_url: 'https://www.linkedin.com/in/shivansh-saxena-6a31b3248'
   },
   {
@@ -41,7 +41,7 @@ const manualTeam: TeamMember[] = [
     name: 'P Bhaskar Rao',
     role: 'Secretary',
     bio: 'The organizational backbone of the team, managing communications and ensuring smooth operational workflow.',
-    image_url: 'public/photos/P_Bhaskar_Rao.jpg',
+    image_url: '/photos/P_Bhaskar_Rao.jpg',
     linkedin_url: 'https://www.linkedin.com/in/p-bhaskar-rao-140a24227'
   },
   {
@@ -49,7 +49,7 @@ const manualTeam: TeamMember[] = [
     name: 'Aditya Tripathi',
     role: 'Operations',
     bio: 'Expert in managing day-to-day activities and strategic projects, ensuring efficiency and timely execution.',
-    image_url: 'public/photos/Aditiya.jpg',
+    image_url: '/photos/Aditiya.jpg',
     linkedin_url: 'https://www.linkedin.com/in/aditya766'
   },
   {
@@ -57,7 +57,7 @@ const manualTeam: TeamMember[] = [
     name: 'Jiya Siwach',
     role: 'Media Head',
     bio: 'The creative force behind our brand, leading our media strategy and public engagement.',
-    image_url: 'public/photos/jiya.jpg',
+    image_url: '/photos/jiya.jpg',
     linkedin_url: 'https://www.linkedin.com/in/jiya-siwach-9b5826310'
   },
   {
@@ -65,7 +65,7 @@ const manualTeam: TeamMember[] = [
     name: 'Saurav Kumar', // Name updated for accuracy
     role: 'Technical Head',
     bio: 'The engineering visionary who transforms complex technical challenges into powerful, scalable solutions.', 
-    image_url: 'public/photos/saurav_kumar.jpg',
+    image_url: '/photos/saurav_kumar.jpg',
     linkedin_url: 'https://www.linkedin.com/in/saurav-kumar-astro',
     github_url:  'https://github.com/Astro-Saurav',
     email: '0501saurav@gmail.com' // --- NEW: Added email
